@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - main
+    links:
+      - db
+    depends_on:
+      - db
+    volumes:
+      - ./src:/var/app
+    working_dir: /var/app/
+    command: bash run.sh
+
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    container_name: database
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: exads
+      MYSQL_ROOT_PASSWORD: exads
+      MYSQL_USER: exads
+      MYSQL_PASSWORD: exads
+    ports:
+      - "3306"
+    networks:
+      - main
+
+networks:
+  main:
