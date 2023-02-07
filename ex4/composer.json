@@ -1,0 +1,12 @@
+{
+    "name": "ericsts/exads",
+    "autoload": {
+        "psr-4": {
+            "Eric\\": "src/"
+        }
+    },
+    "require": {
+        "exads/ab-test-data": "^1.0",
+        "phpunit/php-timer": "^6.0"
+    }
+}

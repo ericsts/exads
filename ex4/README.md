@@ -20,3 +20,7 @@ The data will be structured as follows:
 ]
 
 The code needs to be object-oriented and scalable. The number of designs per promotion may vary.
+
+### run php tests/test.php
+
+to see the result
