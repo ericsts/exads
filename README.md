@@ -1,3 +1,6 @@
-# EXADS
+# just some very simple PHP exercises
 
-## it is just a test
+## just some straightforward PHP exercises
+
+### just some elementary PHP exercises
+
